@@ -1,4 +1,3 @@
-# eipcore2
 EIP Core2 权限管理系统
 一、源码介绍
        1、开发工具:Vs2017+SqlServer 2008R2 及以上版本
