@@ -1,4 +1,4 @@
-EIP Core2 权限管理系统  (交流群:495070603)
+EIP Core2 权限管理系统 (交流群:495070603，作者:1039318332) 
 一、源码介绍(注意此版本基于2.0开发)
 
        1、开发工具:Vs2017+SqlServer 2008R2 及以上版本
@@ -27,4 +27,23 @@ EIP Core2 权限管理系统  (交流群:495070603)
 	可参考http://blog.csdn.net/heshushun/article/details/77776706
 	      https://www.cnblogs.com/jiaxuekai/p/7204716.html
 	      httpsk://www.cnblogs.com/ljwk/p/8014164.html
-4,暂时没有找到上传图片地方,需要看效果图见源码(Web/截图)
+四，项目截图
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143545_36bfefaf_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143504_2f23f5fd_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143453_5da63bcd_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143613_dea1e6cf_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143620_6c0e6208_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143632_0f4f5054_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143639_5e0ee10a_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143646_7c7ff1bd_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143702_0da758c9_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143708_e1dfcc94_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143715_68c6b738_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143720_bc504328_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143729_80f9b49d_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143735_619e3d5b_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143740_c4ba9e02_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143747_08cf7e9e_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143753_f6c946e7_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143802_ed7b941f_368165.png "在这里输入图片标题")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0828/143858_8c731e08_368165.png "在这里输入图片标题")
