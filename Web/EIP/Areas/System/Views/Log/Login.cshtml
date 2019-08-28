@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">登录日志</h3>
+                <div class="box-tools pull-right search-form" id="table-toolbar">
+                    <div class="input-group pull-left">
+                        <input type="text" placeholder="登录时间区间" style="width: 240px" readonly="readonly" class="input-sm form-control" id="createTime">
+                        <div class="input-group-addon ">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <input placeholder="请输入登录名" id="code" class="input-sm form-control">
+                    <input placeholder="请输入姓名" id="name" class="input-sm form-control">
+                    <button title="查询" id="search" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn"><i class="fa fa-search">查询</i></button>
+                    <button onclick="del();" title="删除" data-toggle="tooltip" class="btn  btn-flat btn-sm eip-btn"><i class="fa fa  fa-trash">删除</i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/log/login.js"></script>

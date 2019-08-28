@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseEdit.cshtml";
+}
+<div class="box-body">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">上级单位</label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <input type="text" name="ParentName" id="ParentName" class="form-control" data-pure-clear-button placeholder="上级单位" readonly="readonly">
+                    <span id="menuBtn" class="input-group-addon pointer"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label m">全称</label>
+            <div class="col-sm-9">
+                <input type="text" name="Name" id="Name" data-pure-clear-button class="form-control" placeholder="请输入全称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">简称</label>
+            <div class="col-sm-9">
+                <input type="text" name="ShortName" id="ShortName" data-pure-clear-button class="form-control" placeholder="请输入简称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">负责人</label>
+            <div class="col-sm-9">
+                <input type="text" name="MainSupervisor" id="MainSupervisor" data-pure-clear-button class="form-control" placeholder="请输入负责人">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">负责人联系方式</label>
+            <div class="col-sm-9">
+                <input type="text" name="MainSupervisorContact" id="MainSupervisorContact" data-pure-clear-button class="form-control" placeholder="请输入负责人联系方式">
+            </div>
+        </div>
+        @*<div class="form-group">
+            <label class="col-sm-3 control-label">经度</label>
+            <div class="col-sm-9">
+                <input type="text" name="Longitude" id="Longitude" data-pure-clear-button class="form-control" placeholder="请输入经度">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">纬度</label>
+            <div class="col-sm-9">
+                <input type="text" name="Latitude" id="Latitude" data-pure-clear-button class="form-control" placeholder="请输入纬度">
+            </div>
+        </div>*@
+        <div class="form-group">
+            <label class="col-sm-3 control-label">冻结</label>
+            <div class="col-sm-9">
+                <input type="checkbox" data-flag="icheck" class="minimal" name="IsFreeze" id="IsFreeze" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">排序号</label>
+            <div class="col-sm-9">
+                <input type="text" name="OrderNo" value="0" class="form-control" data-pure-clear-button placeholder="请输入排序号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">备注</label>
+            <div class="col-sm-9">
+                <textarea class="form-control" data-pure-clear-button id="Remark" name="Remark" placeholder="备注"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="OrganizationId" name="OrganizationId" value="@Context.Request.Query["id"]"/>
+<input type="hidden" id="ParentId" name="ParentId" />
+
+<div class="dropdown-menu" id="content" style="display:none;">
+    <div class="ip-control">
+        <div class="box-tools">
+            <div class="input-group" id="input-group" style="padding-left:5px">
+                <input type="text" id="searchValueKey" class="form-control input-sm" placeholder="请输入关键字...">
+                <div class="input-group-btn">
+                    <a class="btn btn-sm btn-default" id="searchValue"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="select-tree" class="jstree" style="margin-top:0; height: 223px; overflow: auto"></ul>
+</div>
+<script src="~/app/system/organization/edit.js"></script>

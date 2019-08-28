@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-3 padding-right-box">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">单位结构</h3>
+                <div class="box-tools pull-right">
+                    <button id="arrowinHref" class="btn  eip-btn  btn-flat btn-sm"><i class="fa fa-folder" id="arrowin">折叠</i></button>
+                    <button id="reload" title="刷新" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn"><i class="fa fa-refresh">刷新</i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <ul id="tree" class="jstree"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 padding-left-zero">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">组列表</h3>
+                <div class="box-tools pull-right" id="table-toolbar">
+                    <div class="input-group" id="search-filters">
+                        <input type="text" search-type="cn" search-field="gr.Name" class="filter form-control input-sm" data-toggle="tooltip" title="名称查询..." placeholder="名称查询...">
+                        <div class="input-group-btn">
+                            <button id="search" class="btn btn-sm eip-btn"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/group/list.js"></script>

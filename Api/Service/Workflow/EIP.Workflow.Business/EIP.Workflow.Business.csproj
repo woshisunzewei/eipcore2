@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\EIP.Common.Business\EIP.Common.Business.csproj" />
+    <ProjectReference Include="..\..\..\Common\EIP.Common.Core\EIP.Common.Core.csproj" />
+    <ProjectReference Include="..\..\..\Common\EIP.Common.Entities\EIP.Common.Entities.csproj" />
+    <ProjectReference Include="..\..\System\EIP.System.DataAccess\EIP.System.DataAccess.csproj" />
+    <ProjectReference Include="..\..\System\EIP.System.Models\EIP.System.Models.csproj" />
+    <ProjectReference Include="..\EIP.Workflow.DataAccess\EIP.Workflow.DataAccess.csproj" />
+    <ProjectReference Include="..\EIP.Workflow.Models\EIP.Workflow.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,40 @@
+﻿<header class="main-header">
+    <a href="/" class="logo">
+        <span class="logo-mini">EIP</span>
+        <span class="logo-lg">企业信息门户-EIP v1.0</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" data-placement="right" title="收缩" role="button" id="resetSize"></a>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="~/css/user/avatar.jpg" class="user-image img-circle" alt="User Image">
+                        <span class="hidden-xs" id="user-name"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <img src="~/css/user/avatar.jpg" class="img-circle" alt="User Image">
+                            <p id="user-organizationName"></p>
+                        </li>
+                        <li class="user-footer">
+                            <div id="changePwd" class="pull-left" data-href="/Console/Home/ChangePassword">
+                                <a  class=" btn eip-btn btn-flat"><i class="fa fa-key">修改密码</i></a>
+                            </div>
+                            
+                            <div id="longinOut" class="pull-right">
+                                <a href="#" class="btn bg-red btn-default btn-flat"><i class="fa fa-power-off">退出登录</i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-toggle="control-sidebar" title="设置">
+                        <i class="fa fa-gears"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script src="~/app/console/home/header.js"></script>

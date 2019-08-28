@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\EIP.Common.Business\EIP.Common.Business.csproj" />
+    <ProjectReference Include="..\EIP.System.DataAccess\EIP.System.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

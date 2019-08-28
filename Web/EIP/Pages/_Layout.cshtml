@@ -1,0 +1,130 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EIP-v1.0（Enterprise Information Portal）</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- jQuery 2.2.3 -->
+    <script src="~/lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <link href="~/lib/plugins/layui/css/layui.css" rel="stylesheet" />
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/fonts/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/lib/ionicons/css/ionicons.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/lib/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="~/lib/dist/css/skins/_all-skins.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="~/lib/plugins/datepicker/datepicker3.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/lib/plugins/daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="~/lib/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--请求提示-->
+    <link href="~/lib/plugins/pace/pace.min.css" rel="stylesheet" />
+    <script src="~/lib/plugins/pace/pace.min.js"></script>
+
+    <script src="~/lib/plugins/jQueryUI/jquery-ui.min.js"></script>
+    <environment names="Development">
+        <script src="~/lib/resource/language_zh.js"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/build/js/eip.resource.min.js"></script>
+    </environment>
+</head>
+<body id="eipBody" class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        @*顶部*@
+        @Html.Partial("_MainHeader")
+        @*导航菜单*@
+        @Html.Partial("_MainSidebar")
+        @*内容显示*@
+        <div id="mainDiv" class="content-wrapper">
+            @RenderBody()
+            <section class="content" id="tab-page-content"></section>
+        </div>
+        @*页脚*@
+        @Html.Partial("_MainFooter")
+        @*右边弹出菜单栏*@
+        @Html.Partial("_ControlSidebar")
+    </div>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    @*弹出框*@
+    <link href="~/lib/plugins/bootstrap-dialog/css/bootstrap-dialog.min.css" rel="stylesheet" />
+    <script src="~/lib/plugins/bootstrap-dialog/js/bootstrap-dialog.js"></script>
+    <script src="~/lib/plugins/bootstrap-dialog/js/base-modal.js"></script>
+    <link href="~/lib/plugins/bootstrap-notify/toastr.css" rel="stylesheet" />
+    <script src="~/lib/plugins/bootstrap-notify/toastr.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="~/lib/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/lib/plugins/daterangepicker/moment.js"></script>
+    <script src="~/lib/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- datepicker -->
+    <script src="~/lib/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="~/lib/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="~/lib/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/lib/plugins/fastclick/fastclick.js"></script>
+    @*验证*@
+    <script src="~/lib/plugins/validation/formValidation.js"></script>
+    <script src="~/lib/plugins/validation/framework/bootstrap.js"></script>
+    <script src="~/lib/plugins/validation/language/zh_CN.js"></script>
+    <script src="~/lib/plugins/validation/base-form.js"></script>
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/lib/plugins/iCheck/all.css">
+    <link rel="stylesheet" href="~/lib/plugins/iCheck/flat/blue.css">
+    <script src="~/lib/plugins/iCheck/icheck.min.js"></script>
+    @*jstree*@
+    <link href="~/lib/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" />
+    <script src="~/lib/plugins/jstree/dist/jstree.js"></script>
+    @*layui*@
+    <script src="~/lib/plugins/layui/layui.js"></script>
+    @*echarts*@
+    <script src="~/lib/plugins/echarts/echarts.js"></script>
+    @*清空文本框*@
+    <script src="~/lib/plugins/pureClearButton/jquery.bootstrap-pureClearButton.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/lib/dist/js/app.js"></script>
+
+    <!--高德地图-->
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.2&key=7937e1f58f228bc33dacb83c84766d90"></script>
+    <script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+
+    @*上传*@
+    <link href="~/lib/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
+    <script src="~/lib/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="~/lib/plugins/bootstrap-fileinput/themes/fa/theme.js"></script>
+    <script src="~/lib/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
+    <environment names="Development">
+        <link href="~/css/extention/adminlte.css" rel="stylesheet" />
+        <link href="~/css/extention/jstree.css" rel="stylesheet" />
+        <link href="~/css/extention/layui.css" rel="stylesheet" />
+        <link href="~/css/extention/map.css" rel="stylesheet" />
+        <link href="~/css/extention/skin.css" rel="stylesheet" />
+    </environment>
+    <environment names="Staging,Production">
+        <link href="~/build/css/eip.min.css" rel="stylesheet" />
+    </environment>
+    <environment names="Development">
+        <script src="~/lib/dist/js/sidebar-menu.js"></script>
+        <script src="~/lib/function.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/build/js/eip.min.js"></script>
+    </environment>
+</body>
+</html>

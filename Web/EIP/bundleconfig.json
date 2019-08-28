@@ -1,0 +1,61 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/build/css/eip.min.css",
+    "inputFiles": [
+      "wwwroot/css/extention/skin.css",
+      "wwwroot/css/extention/adminlte.css",
+      "wwwroot/css/extention/jstree.css",
+      "wwwroot/css/extention/layui.css",
+      "wwwroot/css/extention/map.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/build/js/eip.min.js",
+    "inputFiles": [
+      "wwwroot/lib/function.js",
+      "wwwroot/lib/dist/js/sidebar-menu.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/build/js/eip.resource.min.js",
+    "inputFiles": [
+      "wwwroot/lib/resource/language_zh.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/build/js/system/user/list.min.js",
+    "inputFiles": [
+      "wwwroot/app/system/user/list.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/build/js/account/login.min.js",
+    "inputFiles": [
+      "wwwroot/app/account/login.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\EIP.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\EIP.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="Quartz" Version="3.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\EIP.Common.Business\EIP.Common.Business.csproj" />
+    <ProjectReference Include="..\..\Common\EIP.Common.DataAccess\EIP.Common.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Common\EIP.Common.Entities\EIP.Common.Entities.csproj" />
+    <ProjectReference Include="..\..\Common\EIP.Common.Quartz\EIP.Common.Quartz.csproj" />
+    <ProjectReference Include="..\..\Common\EIP.Common.Restful\EIP.Common.Restful.csproj" />
+    <ProjectReference Include="..\..\Service\System\EIP.System.Business\EIP.System.Business.csproj" />
+    <ProjectReference Include="..\..\Service\System\EIP.System.DataAccess\EIP.System.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Service\System\EIP.System.Models\EIP.System.Models.csproj" />
+  </ItemGroup>
+
+</Project>

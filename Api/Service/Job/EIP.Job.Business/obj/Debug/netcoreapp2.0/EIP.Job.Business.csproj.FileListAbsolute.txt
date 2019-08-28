@@ -1,0 +1,13 @@
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\EIP.Job.Business.deps.json
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\EIP.Job.Business.dll
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\EIP.Job.Business.pdb
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\EIP.Common.Core.dll
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.dll
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\EIP.Common.Core.pdb
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.xml
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\obj\Debug\netcoreapp2.0\EIP.Job.Business.csprojResolveAssemblyReference.cache
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\obj\Debug\netcoreapp2.0\EIP.Job.Business.csproj.CoreCompileInputs.cache
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\obj\Debug\netcoreapp2.0\EIP.Job.Business.AssemblyInfoInputs.cache
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\obj\Debug\netcoreapp2.0\EIP.Job.Business.AssemblyInfo.cs
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\obj\Debug\netcoreapp2.0\EIP.Job.Business.dll
+F:\05-EIP\版本\AdminLTE\Api\Service\Job\EIP.Job.Business\obj\Debug\netcoreapp2.0\EIP.Job.Business.pdb

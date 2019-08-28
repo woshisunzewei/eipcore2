@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <div class="col-md-12 ">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">请选择模块</h3>
+                <div class="box-tools pull-right">
+                    <a href="javascript:void(0);" onclick=" arrowin(); return false; " data-toggle="tooltip" title="展开" class="btn  eip-btn  btn-flat btn-sm"><i class="fa fa-folder-open" id="arrowin">折叠</i></a>
+                   @* <a href="javascript:void(0);" onclick=" selectall(); return false; " data-toggle="tooltip" title="全选" class="btn  eip-btn  btn-flat btn-sm"><i class="fa fa-check-circle-o" id="select">全选</i></a>*@
+                </div>
+            </div>
+            <div class="box-body">
+                <ul id="menuTree" class="jstree" style="height: 400px; overflow: auto"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box-footer text-right">
+    <!--以下两种方式提交验证,根据所需选择-->
+    <button onclick=" formSubmit(); return false; " type="button" class="btn btn-success" data-btn-type="save" title="确定"><span class="bootstrap-dialog-button-icon fa fa-check"></span>确定</button>
+    <button type="button" class="btn btn-danger" data-btn-type="cancel" data-dismiss="modal"><span class="bootstrap-dialog-button-icon fa fa-times"></span>取消</button>
+</div>
+@Html.Hidden("privilegeMasterValue")
+@Html.Hidden("privilegeMaster")
+<script src="~/app/system/permission/menu.js"></script>

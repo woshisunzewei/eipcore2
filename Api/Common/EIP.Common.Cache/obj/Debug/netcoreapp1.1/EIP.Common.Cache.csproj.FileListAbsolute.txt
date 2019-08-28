@@ -1,0 +1,7 @@
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\bin\Debug\netcoreapp1.1\EIP.Common.Cache.deps.json
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\bin\Debug\netcoreapp1.1\EIP.Common.Cache.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\bin\Debug\netcoreapp1.1\EIP.Common.Cache.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\obj\Debug\netcoreapp1.1\EIP.Common.Cache.AssemblyInfo.cs
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\obj\Debug\netcoreapp1.1\EIP.Common.Cache.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\obj\Debug\netcoreapp1.1\EIP.Common.Cache.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.Cache\obj\Debug\netcoreapp1.1\EIP.Common.Cache.csprojResolveAssemblyReference.cache

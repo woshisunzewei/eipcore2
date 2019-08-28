@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于Bootstrup的强大jQuery表单验证插件|tab_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<!-- Include the FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
+    <link rel="stylesheet" href="http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="dist/css/formValidation.css"/>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-sidebar">
+		<ul>
+			<li><span class="fa fa-arrow-right"></span> <a href="index.html">default</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="validators.html">validators</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="ajaxSubmit.html">ajaxSubmit</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="attribute.html">attribute</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="choice.html">choice</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="collapse.html">collapse</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container.html">container</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container2.html">container2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container3.html">container3</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container4.html">container4</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="date.html">date</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="defaultMessage.html">defaultMessage</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic.html">dynamic</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic2.html">dynamic2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic3.html">dynamic3</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic4.html">dynamic4</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="enable.html">enable</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="enable2.html">enable2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="event.html">event</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="event2.html">event2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="event3.html">event3</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="file.html">file</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="html5.html">html5</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="i18n.html">i18n</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="ignored.html">ignored</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="invisible.html">invisible</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="mailgun.html">mailgun</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="message.html">message</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="multiple.html">multiple</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="multipleAsOne.html">multipleAsOne</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="remote.html">remote</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="reset.html">reset</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="row.html">row</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="selector.html">selector</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="selector2.html">selector2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="specialName.html">specialName</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="submitHandler.html">submitHandler</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="tab.html" class="current">tab</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="tooltip.html">tooltip</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="typehead.html">typehead</a></li>
+		</ul>
+	</div>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header bgcolor-1">
+			<h1>基于Bootstrup的强大jQuery表单验证插件 <span>The best jQuery plugin to validate form fields</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Form/201505101807.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="container">
+	        <div class="row">
+	            <section>
+	                <div class="col-xs-8 col-xs-offset-2">
+	                    <div class="page-header">
+	                        <h2>Tab example</h2>
+	                    </div>
+
+	                    <ul class="nav nav-tabs">
+	                        <li class="active"><a href="#info-tab" data-toggle="tab">Information <i class="glyphicon"></i></a></li>
+	                        <li><a href="#address-tab" data-toggle="tab">Address <i class="glyphicon"></i></a></li>
+	                    </ul>
+
+	                    <form id="accountForm" method="post" class="form-horizontal" action="target.php" style="margin-top: 20px;">
+	                        <div class="tab-content">
+	                            <div class="tab-pane active" id="info-tab">
+	                                <div class="form-group">
+	                                    <label class="col-xs-3 control-label">Full name</label>
+	                                    <div class="col-xs-5">
+	                                        <input type="text" class="form-control" name="fullName" />
+	                                    </div>
+	                                </div>
+	                                <div class="form-group">
+	                                    <label class="col-xs-3 control-label">Company</label>
+	                                    <div class="col-xs-5">
+	                                        <input type="text" class="form-control" name="company" />
+	                                    </div>
+	                                </div>
+	                                <div class="form-group">
+	                                    <label class="col-xs-3 control-label">Job title</label>
+	                                    <div class="col-xs-5">
+	                                        <input type="text" class="form-control" name="jobTitle" />
+	                                    </div>
+	                                </div>
+	                                <div class="form-group" id="emailRow">
+	                                    <label class="col-xs-3 control-label">Email</label>
+	                                    <div class="col-xs-5">
+	                                        <input type="text" class="form-control" name="email[]" />
+	                                    </div>
+	                                    <div class="col-xs-4">
+	                                        <button type="button" class="btn btn-default btn-sm addButton">Add</button>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="tab-pane" id="address-tab">
+	                                <div class="form-group">
+	                                    <label class="col-xs-3 control-label">Address</label>
+	                                    <div class="col-xs-5">
+	                                        <input type="text" class="form-control" name="address" />
+	                                    </div>
+	                                </div>
+	                                <div class="form-group">
+	                                    <label class="col-xs-3 control-label">City</label>
+	                                    <div class="col-xs-5">
+	                                        <input type="text" class="form-control" name="city" />
+	                                    </div>
+	                                </div>
+	                                <div class="form-group">
+	                                    <label class="col-xs-3 control-label">Country</label>
+	                                    <div class="col-xs-5">
+	                                        <select class="form-control" name="country">
+	                                            <option value="">Select a country</option>
+	                                            <option value="FR">France</option>
+	                                            <option value="DE">Germany</option>
+	                                            <option value="IT">Italy</option>
+	                                            <option value="JP">Japan</option>
+	                                            <option value="RU">Russian</option>
+	                                            <option value="US">United State</option>
+	                                            <option value="GB">United Kingdom</option>
+	                                            <option value="other">Other</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <div class="col-xs-5 col-xs-offset-3">
+	                                <button type="submit" class="btn btn-primary">Validate</button>
+	                            </div>
+	                        </div>
+	                    </form>
+	                </div>
+	            </section>
+	        </div>
+	    </div>
+
+	    <div class="form-group hide" id="emailTemplate">
+	        <div class="col-xs-offset-3 col-xs-5">
+	            <input class="form-control" type="text" name="email[]" />
+	        </div>
+	        <div class="col-xs-4">
+	            <button type="button" class="btn btn-default btn-sm removeButton">Remove</button>
+	        </div>
+	    </div>
+		<div class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/html5/html5muban/201505091801.html">
+			  <img src="related/1.jpg" width="300" alt="基于Bootstrup 3可预览的HTML5文件上传插件"/>
+			  <h3>基于Bootstrup 3可预览的HTML5文件上传插件</h3>
+			</a>
+			<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201505011764.html">
+			  <img src="related/2.jpg" width="300" alt="基于bootstrup的响应式jQuery滚动新闻插件"/>
+			  <h3>基于bootstrup的响应式jQuery滚动新闻插件</h3>
+			</a>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/formValidation.js"></script>
+    <script type="text/javascript" src="dist/js/framework/bootstrap.js"></script>
+    <script type="text/javascript" src="dist/js/language/zh_CN.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+		    $('#accountForm')
+		        .formValidation({
+		            excluded: [':disabled'],
+		            icon: {
+		                valid: 'glyphicon glyphicon-ok',
+		                invalid: 'glyphicon glyphicon-remove',
+		                validating: 'glyphicon glyphicon-refresh'
+		            },
+		            fields: {
+		                fullName: {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The full name is required'
+		                        }
+		                    }
+		                },
+		                company: {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The company name is required'
+		                        }
+		                    }
+		                },
+		                jobTitle: {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The company name is required'
+		                        }
+		                    }
+		                },
+		                'email[]': {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The email address is required'
+		                        },
+		                        emailAddress: {
+		                            message: 'The email address is not valid'
+		                        }
+		                    }
+		                },
+		                address: {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The address is required'
+		                        }
+		                    }
+		                },
+		                city: {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The city is required'
+		                        }
+		                    }
+		                },
+		                country: {
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The city is required'
+		                        }
+		                    }
+		                }
+		            }
+		        })
+		        .on('err.form.fv', function(e) {
+		            var $form          = $(e.target),
+		                fv             = $form.data('formValidation'),
+		                $invalidFields = fv.getInvalidFields();
+
+		            for (var i = 0; i < $invalidFields.length; i++) {
+		                var $field    = $invalidFields.eq(i),
+		                    autoFocus = fv.isOptionEnabled($field.attr('data-fv-field'), 'autoFocus');
+
+		                if (autoFocus) {
+		                    // Activate the tab containing the field if exists
+		                    var $tabPane = $field.parents('.tab-pane'), tabId;
+		                    if ($tabPane && (tabId = $tabPane.attr('id'))) {
+		                        $('a[href="#' + tabId + '"][data-toggle="tab"]').tab('show');
+		                    }
+		                    break;
+		                }
+		            }
+		        })
+		        .on('status.field.fv', function(e, data) {
+		            var validator = data.fv,
+		                $tabPane  = data.element.parents('.tab-pane'),
+		                tabId     = $tabPane.attr('id');
+		            
+		            if (tabId) {
+		                var $icon = $('a[href="#' + tabId + '"][data-toggle="tab"]').parent().find('i');
+
+		                // Add custom class to tab containing the field
+		                if (data.status == validator.STATUS_INVALID) {
+		                    $icon.removeClass('glyphicon-ok').addClass('glyphicon-remove');
+		                } else if (data.status == validator.STATUS_VALID) {
+		                    $icon.removeClass('glyphicon-ok glyphicon-remove');
+
+		                    var isValidTab = validator.isValidContainer($tabPane);
+		                    if (isValidTab !== null) {
+		                        $icon.addClass(isValidTab ? 'glyphicon-ok' : 'glyphicon-remove');
+		                    }
+		                }
+		            }
+		        });
+
+		    $('.addButton').on('click', function() {
+		        var $template = $('#emailTemplate'),
+		            $row      = $template.clone().removeAttr('id').insertAfter('#emailRow').removeClass('hide'),
+		            $el       = $row.find('input').eq(0);
+		        $('#accountForm').formValidation('addField', $el);
+
+		        $row.on('click', '.removeButton', function(e) {
+		            $('#accountForm').formValidation('removeField', $el);
+		            $row.remove();
+		        });
+		    });
+		});
+	</script>
+</body>
+</html>

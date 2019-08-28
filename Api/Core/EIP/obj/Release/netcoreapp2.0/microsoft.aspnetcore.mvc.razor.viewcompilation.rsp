@@ -1,0 +1,5 @@
+F:\05-EIP\版本\AdminLTE\Api\Core\EIP
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=EIP
+--content-root=F:\05-EIP\版本\AdminLTE\Api\Core\EIP
+--file=

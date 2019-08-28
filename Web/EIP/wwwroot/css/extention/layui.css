@@ -1,0 +1,23 @@
+﻿.layui-table, .layui-table-view {
+    margin: 0px;
+    color: black;
+}
+
+.layui-table-view .layui-table td, .layui-table-view .layui-table th {
+    padding: 1px 0;
+}
+
+.layui-table-view .layui-table[lay-size=sm] .layui-table-cell {
+    height: 26px;
+    line-height: 26px;
+}
+.layui-table-cell {
+    padding: 0 4px;
+}
+.layui-table-tips-c{
+    padding:0px;
+}
+
+.layui-layer-dialog .layui-layer-content {
+    line-height: 20px;
+}

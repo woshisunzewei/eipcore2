@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-3 padding-right-box">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">单位结构</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn  eip-btn  btn-flat btn-sm"><i class="fa fa-folder" id="arrowin">折叠</i></button>
+                    <button id="reload" title="刷新" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn"><i class="fa fa-refresh">刷新</i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <ul id="tree" class="jstree"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 padding-left-zero">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">角色列表</h3>
+                <div class="box-tools pull-right" id="table-toolbar">
+                    <div class="input-group" id="search-filters">
+                        <input type="text" search-type="cn" search-field="role.Name" data-toggle="tooltip" title="请输入角色名称查询..." class="filter form-control input-sm" placeholder="请输入角色名称查询...">
+                        <div class="input-group-btn">
+                            <button id="search" class="btn btn-sm eip-btn">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/role/list.js"></script>

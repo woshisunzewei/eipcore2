@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-3 padding-right-box">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">菜单结构</h3>
+                <div class="box-tools pull-right">
+                    <button id="reload" title="刷新" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn">
+                        <i class="fa fa-refresh">刷新</i>
+                    </button>
+                </div>
+            </div>
+            <div class="box-body">
+                <ul id="tree" class="jstree"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 padding-left-zero">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">菜单按钮列表</h3>
+                <div class="box-tools pull-right" id="table-toolbar">
+                    <div class="input-group" id="search-filters">
+                        <input type="text" search-type="cn" search-field="f.Name,f.Script,f.Remark" data-toggle="tooltip" title="名称/方法/备注查询..." class="filter form-control input-sm" placeholder="名称/方法/备注查询...">
+                        <div class="input-group-btn">
+                            <button id="search" class="btn btn-sm eip-btn">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/menubutton/list.js"></script>

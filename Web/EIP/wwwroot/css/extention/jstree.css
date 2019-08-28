@@ -1,0 +1,29 @@
+﻿.jstree-default .jstree-clicked {
+    background: #e5e5e5;
+}
+
+.jstree-default .jstree-node {
+    margin-left: 20px;
+}
+
+.jstree-open > .jstree-anchor > .fa-folder:before {
+    content: "\f07c";
+}
+
+.jstree-open > .jstree-anchor > .fa-file-text-o:before {
+    content: "\f07c";
+}
+
+.jstree-closed > .jstree-anchor > .fa-file-text-o:before {
+    content: "\f07b";
+}
+
+.jstree-default .jstree-search {
+    font-style: normal;
+}
+
+.jstree {
+    overflow: auto;
+    margin: 0;
+    height: 223px;
+}

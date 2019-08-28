@@ -1,0 +1,29 @@
+﻿
+<div id="mapContainer" style="height:400px"></div>
+<script>
+    function init() {
+
+        map = new AMap.Map("mapContainer", {
+            zoom: 18,
+            center: [@Context.Request.Query["longitude"], @Context.Request.Query["latitude"]]
+        });
+      
+        var marker = new AMap.Marker({
+            map: map,
+           
+            position:[@Context.Request.Query["longitude"], @Context.Request.Query["latitude"]]
+        });
+        var infoWindow = new AMap.InfoWindow({
+            content: '@Context.Request.Query["name"]',
+            offset: new AMap.Pixel(0, -30)
+        });
+       
+        marker.on("mouseover", function (e) {
+            infoWindow.open(map, marker.getPosition());
+        });
+
+        infoWindow.open(map, marker.getPosition());
+        map.addControl(new AMap.ToolBar());
+    }
+    init();
+</script>

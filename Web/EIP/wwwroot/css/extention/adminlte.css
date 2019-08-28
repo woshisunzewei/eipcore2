@@ -1,0 +1,182 @@
+﻿a {
+    color: black;
+}
+
+    a:hover {
+        color: black;
+    }
+
+.content {
+    padding: 5px;
+}
+
+.nav-tabs > li > a {
+    padding: 7px;
+}
+
+.nav-tabs-custom > .nav-tabs > li.header {
+    line-height: 0px;
+}
+
+.nav-tabs-custom {
+    margin-bottom: 0px;
+}
+
+.control-label {
+    padding-left: 0px;
+}
+
+.padding-left-zero {
+    padding-left: 0px;
+}
+
+.padding-right-zero {
+    padding-right: 0px;
+}
+
+.padding-right-box {
+    padding-right: 4px;
+}
+
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+
+    .dataTables_scrollHeadInner > table {
+        width: 100% !important;
+    }
+
+.tooltip-inner {
+    max-width: 100%;
+}
+
+.ui-jqgrid tr.ui-row-ltr td {
+    text-overflow: ellipsis;
+}
+
+.form-horizontal .form-group font {
+    color: red;
+    position: absolute;
+    right: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 0px;
+}
+
+.listsearch input {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+
+.box {
+    border-radius: 0px;
+    margin-bottom: 2px;
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #eee;
+}
+
+.box-header .box-title {
+    font-size: 16px;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #ddd;
+}
+
+.modal-body {
+    margin: 0px;
+    padding: 2px;
+}
+
+.box-body {
+    padding: 2px;
+}
+
+.form-control[readonly] {
+    background-color: white;
+}
+
+.left-boder-color {
+    padding-left: 8px;
+    border-left: 2px solid #3c8dbc;
+}
+
+
+
+#table-toolbar .input-group {
+    width: 190px;
+    float: right;
+    margin-left: 4px;
+}
+
+.popover-content {
+    padding: 4px;
+}
+
+#kvFileinputModal {
+    z-index: 2000;
+}
+
+#headImage {
+    cursor: pointer;
+}
+
+.filter {
+}
+
+.m {
+}
+
+.form-datetime {
+}
+
+.msg-content {
+}
+
+.main-header .sidebar-toggle:before {
+    content: "\f03b";
+}
+
+.sidebar-collapse .main-header .sidebar-toggle:before {
+    content: "\f03c";
+}
+
+.main-header .logo {
+    padding: 0px;
+}
+
+    .main-header .logo .logo-lg {
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 0 0 12px;
+        font-family: Myriad Pro,Helvetica Neue,Arial,Helvetica,sans-serif;
+        font-weight: 600;
+    }
+
+.sidebar-mini.sidebar-collapse .main-header .logo > .logo-mini {
+    display: block;
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 20px;
+    font-family: Myriad Pro,Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-weight: 600;
+}
+
+.search-form input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+}
+
+.search-form button {
+    vertical-align: top;
+}

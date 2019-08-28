@@ -1,0 +1,15 @@
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.DataAccess.deps.json
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.DataAccess.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.DataAccess.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\obj\Debug\netcoreapp1.1\EIP.Common.DataAccess.AssemblyInfo.cs
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\obj\Debug\netcoreapp1.1\EIP.Common.DataAccess.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\obj\Debug\netcoreapp1.1\EIP.Common.DataAccess.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\obj\Debug\netcoreapp1.1\EIP.Common.DataAccess.csprojResolveAssemblyReference.cache
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.Core.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.Entities.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.Entities.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.Core.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.Dapper.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\bin\Debug\netcoreapp1.1\EIP.Common.Dapper.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\obj\Debug\netcoreapp1.1\EIP.Common.DataAccess.csproj.CoreCompileInputs.cache
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Common\EIP.Common.DataAccess\obj\Debug\netcoreapp1.1\EIP.Common.DataAccess.AssemblyInfoInputs.cache

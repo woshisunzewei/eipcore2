@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于Bootstrup的强大jQuery表单验证插件|tooltip_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+    <!-- Include the FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
+    <link href="~/Scripts/lib/adminlte/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="/Scripts/lib/adminlte/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Scripts/lib/adminlte/dist/css/AdminLTE.min.css">
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+    <form id="defaultForm" method="post" class="form-horizontal bv-form" action="target.php">
+        <div class="box-body">
+            <div class="col-md-7">
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"><font face="宋体">*</font>旧密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" name="oldPassword" placeholder="请输入旧密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword" class="col-sm-3 control-label"><font face="宋体">*</font>新密码</label>
+
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="newPassword" placeholder="请输入新密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">密码强度</label>
+                    <div id="level" class=" col-sm-9 pw-strength" style="">
+                        <div class="pw-bar"></div>
+                        <div class="pw-bar-on"></div>
+                        <div class="pw-txt">
+                            <span>弱</span>
+                            <span>中</span>
+                            <span>强</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmNewPassword" class="col-sm-3 control-label"><font face="宋体">*</font>确认新密码</label>
+
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="confirmNewPassword" placeholder="请输入确认新密码">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="box-footer">
+            <button class="btn btn-warning pull-right fa fa-pinterest">重置</button>
+            <button type="submit" class="btn btn-info pull-right fa fa-save">保存</button>
+        </div>
+    </form>
+
+
+    <script src="/Scripts/lib/adminlte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="/Scripts/lib/adminlte/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/formValidation.js"></script>
+    <script type="text/javascript" src="dist/js/framework/bootstrap.js"></script>
+    <script type="text/javascript" src="dist/js/language/zh_CN.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#defaultForm').formValidation({
+                err: {
+                    container: 'tooltip'
+                },
+                //        trigger: 'blur',
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    newPassword: {
+                        validators: {
+                            stringLength: {
+                                enabled: false,
+                                min: 4,
+                                message: 'The first name must be more than 5 characters'
+                            },
+                            notEmpty: {
+                                message: 'The first name is required'
+                            },
+                            regexp: {
+                                enabled: true,
+                                regexp: /^[a-z]+$/i,
+                                message: 'The first name must consist of a-z, A-Z characters only'
+                            }
+                        }
+                    },
+                    oldPassword: {
+                        validators: {
+                            stringLength: {
+                                min: 4,
+                                message: 'The last name must be more than 5 characters'
+                            },
+                            notEmpty: {
+                                message: 'The last name is required'
+                            },
+                            regexp: {
+                                regexp: /^[a-z]+$/i,
+                                message: 'The last name must consist of a-z, A-Z characters only'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

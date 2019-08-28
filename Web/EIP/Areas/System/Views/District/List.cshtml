@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-3">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">行政区划</h3>
+            </div>
+            <div class="box-body">
+                <ul id="tree" class="jstree"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 padding-left-zero">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">行政区划列表</h3>
+                <div class="box-tools pull-right">
+                    <div id="table-toolbar"></div>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="district-list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/district/list.js"></script>

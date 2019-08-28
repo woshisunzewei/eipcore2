@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-3 padding-right-box">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">单位结构</h3>
+                <div class="box-tools pull-right">
+                    <button id="arrowinHref" class="btn  eip-btn  btn-flat btn-sm"><i class="fa fa-folder" id="arrowin">折叠</i></button>
+                    <button id="reload" title="刷新" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn"><i class="fa fa-refresh">刷新</i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <ul id="tree" class="jstree"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 padding-left-zero">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">用户列表</h3>
+                <div class="box-tools pull-right" id="table-toolbar">
+                    <div class="input-group" id="user-search" style="width: 160px">
+                        <input class="filter" search-type="eq" search-field="pu.PrivilegeMasterValue" id="PrivilegeMasterValue" type="hidden" />
+                        <input class="filter form-control input-sm" search-type="cn" search-field="u.Code,u.Name" placeholder="登录名/姓名查询..." type="text">
+                        <div class="input-group-btn">
+                            <button id="search" class="btn btn-sm eip-btn"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<environment names="Development">
+    <script src="~/app/system/user/list.js"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="~/build/js/system/user/list.min.js"></script>
+</environment>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

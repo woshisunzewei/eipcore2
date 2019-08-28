@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于Bootstrup的强大jQuery表单验证插件|selector_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<!-- Include the FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
+    <link rel="stylesheet" href="http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="dist/css/formValidation.css"/>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-sidebar">
+		<ul>
+			<li><span class="fa fa-arrow-right"></span> <a href="index.html">default</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="validators.html">validators</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="ajaxSubmit.html">ajaxSubmit</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="attribute.html">attribute</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="choice.html">choice</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="collapse.html">collapse</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container.html">container</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container2.html">container2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container3.html">container3</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="container4.html">container4</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="date.html">date</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="defaultMessage.html">defaultMessage</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic.html">dynamic</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic2.html">dynamic2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic3.html">dynamic3</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="dynamic4.html">dynamic4</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="enable.html">enable</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="enable2.html">enable2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="event.html">event</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="event2.html">event2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="event3.html">event3</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="file.html">file</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="html5.html">html5</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="i18n.html">i18n</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="ignored.html">ignored</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="invisible.html">invisible</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="mailgun.html">mailgun</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="message.html">message</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="multiple.html">multiple</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="multipleAsOne.html">multipleAsOne</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="remote.html">remote</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="reset.html">reset</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="row.html">row</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="selector.html" class="current">selector</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="selector2.html">selector2</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="specialName.html">specialName</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="submitHandler.html">submitHandler</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="tab.html">tab</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="tooltip.html">tooltip</a></li>
+			<li><span class="fa fa-arrow-right"></span> <a href="typehead.html">typehead</a></li>
+		</ul>
+	</div>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header bgcolor-1">
+			<h1>基于Bootstrup的强大jQuery表单验证插件 <span>The best jQuery plugin to validate form fields</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Form/201505101807.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="container">
+	        <div class="row">
+	            <section>
+	                <div class="col-sm-8 col-sm-offset-2">
+	                    <div class="page-header">
+	                        <h2>Credit card information</h2>
+	                    </div>
+
+	                    <form id="paymentForm" method="post" class="form-horizontal" action="target.php">
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label">Card holder</label>
+	                            <div class="col-sm-5">
+	                                <input type="text" class="form-control" id="cardHolder" />
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label">Credit card number</label>
+	                            <div class="col-sm-5">
+	                                <input type="text" class="form-control" id="ccNumber" />
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label">Expiration</label>
+	                            <div class="col-sm-4">
+	                                <input type="text" class="form-control" placeholder="Month" data-stripe="exp-month" />
+	                            </div>
+	                            <div class="col-sm-4">
+	                                <input type="text" class="form-control" placeholder="Year" data-stripe="exp-year" />
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label">CVV</label>
+	                            <div class="col-sm-2">
+	                                <input type="text" class="form-control cvvNumber" name="cvv" />
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <div class="col-sm-9 col-sm-offset-3">
+	                                <button type="submit" class="btn btn-primary">Pay</button>
+	                            </div>
+	                        </div>
+	                    </form>
+	                </div>
+	            </section>
+	        </div>
+	    </div>
+		<div class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/html5/html5muban/201505091801.html">
+			  <img src="related/1.jpg" width="300" alt="基于Bootstrup 3可预览的HTML5文件上传插件"/>
+			  <h3>基于Bootstrup 3可预览的HTML5文件上传插件</h3>
+			</a>
+			<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201505011764.html">
+			  <img src="related/2.jpg" width="300" alt="基于bootstrup的响应式jQuery滚动新闻插件"/>
+			  <h3>基于bootstrup的响应式jQuery滚动新闻插件</h3>
+			</a>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/formValidation.js"></script>
+    <script type="text/javascript" src="dist/js/framework/bootstrap.js"></script>
+    <script type="text/javascript" src="dist/js/language/zh_CN.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+		    $('#paymentForm')
+		        .formValidation({
+		            icon: {
+		                valid: 'fa fa-check',
+		                invalid: 'fa fa-times',
+		                validating: 'fa fa-refresh'
+		            },
+		            fields: {
+		                cardHolder: {
+		                    selector: '#cardHolder',
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The card holder is required'
+		                        },
+		                        stringCase: {
+		                            message: 'The card holder must contain upper case characters only',
+		                            case: 'upper'
+		                        }
+		                    }
+		                },
+		                ccNumber: {
+		                    selector: '#ccNumber',
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The credit card number is required'
+		                        },
+		                        creditCard: {
+		                            message: 'The credit card number is not valid'
+		                        }
+		                    }
+		                },
+		                expMonth: {
+		                    selector: '[data-stripe="exp-month"]',
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The expiration month is required'
+		                        },
+		                        digits: {
+		                            message: 'The expiration month can contain digits only'
+		                        },
+		                        callback: {
+		                            message: 'Expired',
+		                            callback: function(value, validator) {
+		                                value = parseInt(value, 10);
+		                                var year         = validator.getFieldElements('expYear').val(),
+		                                    currentMonth = new Date().getMonth() + 1,
+		                                    currentYear  = new Date().getFullYear();
+		                                if (value < 0 || value > 12) {
+		                                    return false;
+		                                }
+		                                if (year == '') {
+		                                    return true;
+		                                }
+		                                year = parseInt(year, 10);
+		                                if (year > currentYear || (year == currentYear && value > currentMonth)) {
+		                                    validator.updateStatus('expYear', 'VALID');
+		                                    return true;
+		                                } else {
+		                                    return false;
+		                                }
+		                            }
+		                        }
+		                    }
+		                },
+		                expYear: {
+		                    selector: '[data-stripe="exp-year"]',
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The expiration year is required'
+		                        },
+		                        digits: {
+		                            message: 'The expiration year can contain digits only'
+		                        },
+		                        callback: {
+		                            message: 'Expired',
+		                            callback: function(value, validator) {
+		                                value = parseInt(value, 10);
+		                                var month        = validator.getFieldElements('expMonth').val(),
+		                                    currentMonth = new Date().getMonth() + 1,
+		                                    currentYear  = new Date().getFullYear();
+		                                if (value < currentYear || value > currentYear + 10) {
+		                                    return false;
+		                                }
+		                                if (month == '') {
+		                                    return false;
+		                                }
+		                                month = parseInt(month, 10);
+		                                if (value > currentYear || (value == currentYear && month > currentMonth)) {
+		                                    validator.updateStatus('expMonth', 'VALID');
+		                                    return true;
+		                                } else {
+		                                    return false;
+		                                }
+		                            }
+		                        }
+		                    }
+		                },
+		                cvvNumber: {
+		                    selector: '.cvvNumber',
+		                    validators: {
+		                        notEmpty: {
+		                            message: 'The CVV number is required'
+		                        },
+		                        cvv: {
+		                            message: 'The value is not a valid CVV',
+		                            creditCardField: 'ccNumber'
+		                        }
+		                    }
+		                }
+		            }
+		        })
+		        .on('success.validator.fv', function(e, data) {
+		            if (data.field === 'ccNumber' && data.validator === 'creditCard') {
+		                var $icon = data.element.data('fv.icon');
+		                switch (data.result.type) {
+		                    case 'AMERICAN_EXPRESS':
+		                        $icon.removeClass().addClass('form-control-feedback fa fa-cc-amex');
+		                        break;
+		                    case 'DISCOVER':
+		                        $icon.removeClass().addClass('form-control-feedback fa fa-cc-discover');
+		                        break;
+		                    case 'MASTERCARD':
+		                        $icon.removeClass().addClass('form-control-feedback fa fa-cc-mastercard');
+		                        break;
+		                    case 'VISA':
+		                        $icon.removeClass().addClass('form-control-feedback fa fa-cc-visa');
+		                        break;
+		                    default:
+		                        $icon.removeClass().addClass('form-control-feedback fa fa-credit-card');
+		                        break;
+		                }
+		            }
+		        })
+		        .on('err.field.fv', function(e, data) {
+		            if (data.field === 'ccNumber') {
+		                var $icon = data.element.data('fv.icon');
+		                $icon.removeClass().addClass('form-control-feedback fa fa-times');
+		            }
+		        });
+		});
+	</script>
+</body>
+</html>

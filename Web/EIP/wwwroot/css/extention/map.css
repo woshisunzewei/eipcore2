@@ -1,0 +1,7 @@
+﻿
+/**自定义标签样式**/
+.amap-marker-label {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px #e6e6e6;
+}

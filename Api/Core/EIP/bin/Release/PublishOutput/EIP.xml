@@ -1,0 +1,1098 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIP</name>
+    </assembly>
+    <members>
+        <member name="T:EIP.Controllers.AccountController">
+            <summary>
+            帐号控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.AccountController.#ctor(Microsoft.Extensions.Options.IOptions{EIP.Common.Restful.Jwt.JwtConfiguration},EIP.System.Business.Identity.ISystemUserInfoLogic,EIP.System.Business.Identity.ISystemOrganizationLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="jwtConfig"></param>
+            <param name="userInfoLogic"></param>
+            <param name="organizationLogic"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:EIP.Controllers.AccountController.Login(EIP.System.Models.Dtos.Identity.SystemUserLoginInput)">
+            <summary>
+            登录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.AccountController.WriteLoginLog">
+            <summary>
+            写登录日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.AccountController.LoginOut">
+            <summary>
+            退出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.ConfigController">
+            <summary>
+                系统配置文件类
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.ConfigController.GetConfig">
+            <summary>
+                读取所有信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.ConfigController.SaveConfig(EIP.Common.Entities.Dtos.Input)">
+            <summary>
+                保存配置信息值
+            </summary>
+            <param name="input">配置项信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.DataController">
+            <summary>
+                数据权限控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.DataController.GetDataByMenuId(EIP.Common.Entities.Dtos.NullableIdInput)">
+            <summary>
+                根据菜单Id获取数据权限规则
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DataController.SaveData(EIP.System.Models.Dtos.Permission.SystemDataDoubleWayDto)">
+            <summary>
+                保存数据权限规则
+            </summary>
+            <param name="doubleWayDto">数据权限规则</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DataController.DeleteByDataId(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据字段Id删除数据权限规则
+            </summary>
+            <param name="input">数据权限规则Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.DictionaryController">
+            <summary>
+                字典控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.#ctor(EIP.System.Business.Config.ISystemDictionaryLogic)">
+            <summary>
+            
+            </summary>
+            <param name="dictionaryLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.GetById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据id获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.GetAllDictionaries">
+            <summary>
+                查询所有字典信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.GetDictionaryTree">
+            <summary>
+                查询所有字典信息:Ztree格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.GetDictionariesByParentId(EIP.Common.Entities.Dtos.NullableIdInput)">
+            <summary>
+                根据父级Id读取子字典列表信息
+            </summary>
+            <param name="input">父级id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.GetDictionaryTreeByParentIds(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            根据ParentIds获取所有下级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.GetDictionarieByParentId(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            根据ParentId获取所有下级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.SaveDictionary(EIP.System.Models.Entities.SystemDictionary)">
+            <summary>
+                保存字典数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DictionaryController.DeleteDictionary(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                删除字典数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.DistrictController">
+            <summary>
+                省市县管理控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.#ctor(EIP.System.Business.Config.ISystemDistrictLogic)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="districtLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.GetDistrictTreeByParentId(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据父级查询所有子集
+            </summary>
+            <param name="input">父级</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.GetDistrictByParentId(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据父级查询所有子集
+            </summary>
+            <param name="input">父级</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.GetDistrictById(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据县Id获取省市县Id
+            </summary>
+            <param name="input">县Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.GetDistrictByCountId(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据县Id获取省市县Id
+            </summary>
+            <param name="input">县Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.SaveDistrict(EIP.System.Models.Entities.SystemDistrict)">
+            <summary>
+                保存省市县信息
+            </summary>
+            <param name="district">省市县信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.CheckDistrictId(EIP.Common.Entities.Dtos.CheckSameValueInput)">
+            <summary>
+                检测代码是否已经具有重复项
+            </summary>
+            <param name="input">需要验证的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.DistrictController.DeleteDistrict(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                删除省市县及下级数据
+            </summary>
+            <param name="input">父级id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.FieldController">
+            <summary>
+                字段管理控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.FieldController.GetFieldByMenuId(EIP.System.Models.Dtos.Permission.SystemFieldPagingInput)">
+            <summary>
+                根据菜单Id获取字段数据
+            </summary>
+            <param name="paging"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.FieldController.SaveField(EIP.System.Models.Entities.SystemField)">
+            <summary>
+                保存字段信息
+            </summary>
+            <param name="field">字段信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.FieldController.DeleteField(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据字段Id删除字段信息
+            </summary>
+            <param name="input">字段Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.GroupController">
+            <summary>
+                组管理控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.GroupController.#ctor(EIP.System.Business.Identity.ISystemGroupLogic,EIP.System.Business.Identity.ISystemUserInfoLogic,EIP.System.Business.Identity.ISystemOrganizationLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="groupLogic"></param>
+            <param name="userInfoLogic"></param>
+            <param name="organizationLogic"></param>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="M:EIP.Controllers.GroupController.GetGroupByOrganizationId(EIP.Common.Entities.Dtos.NullableIdInput)">
+            <summary>
+                根据组织机构Id获取对应下的组信息:id为空查询所有
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.GroupController.CheckGroupCode(EIP.Common.Entities.Dtos.CheckSameValueInput)">
+            <summary>
+                检测代码是否已经具有重复项
+            </summary>
+            <param name="input">需要验证的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.GroupController.SaveGroup(EIP.System.Models.Entities.SystemGroup)">
+            <summary>
+                保存组数据
+            </summary>
+            <param name="group">组信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.GroupController.DeleteGroup(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                删除组数据
+            </summary>
+            <param name="input">组Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.GroupController.GetPagingUser(EIP.System.Models.Dtos.Identity.SystemUserPagingInput)">
+            <summary>
+                分页获取所有用户信息
+            </summary>
+            <param name="paging">用户信息分页参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.HomeController">
+            <summary>
+            主页
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.HomeController.#ctor(EIP.System.Business.Permission.ISystemPermissionLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor,EIP.System.Business.Identity.ISystemUserInfoLogic)">
+            <summary>
+            
+            </summary>
+            <param name="permissionLogic"></param>
+            <param name="httpContextAccessor"></param>
+            <param name="userInfoLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.HomeController.LoadMenuPermission">
+            <summary>
+                加载模块权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.HomeController.GetChildNodes(System.Collections.Generic.IList{EIP.Common.Entities.Tree.JsTreeEntity},EIP.Common.Entities.Tree.JsTreeEntity)">
+            <summary>
+                根据当前节点，加载子节点
+            </summary>
+            <param name="treeEntitys">TreeEntity的集合</param>
+            <param name="currTreeEntity">当前节点</param>
+        </member>
+        <member name="M:EIP.Controllers.HomeController.SaveChangePassword(EIP.System.Models.Dtos.Identity.SystemUserChangePasswordInput)">
+            <summary>
+                保存修改密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.HomeController.CheckOldPassword(EIP.Common.Entities.Dtos.CheckSameValueInput)">
+            <summary>
+                验证旧密码是否输入正确
+            </summary>
+            <param name="input">需要验证的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.LogController">
+            <summary>
+                日志管理控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.LogController.#ctor(EIP.System.Business.Log.ISystemExceptionLogLogic,EIP.System.Business.Log.ISystemLoginLogLogic,EIP.System.Business.Log.ISystemOperationLogLogic,EIP.System.Business.Log.ISystemDataLogLogic,EIP.System.Business.Log.ISystemSqlLogLogic)">
+            <summary>
+            
+            </summary>
+            <param name="exceptionLogLogic"></param>
+            <param name="loginLogLogic"></param>
+            <param name="operationLogLogic"></param>
+            <param name="dataLogLogic"></param>
+            <param name="sqlLogLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetPagingDataLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                获取所有数据日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetDataLogById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据主键获取数据日志
+            </summary>
+            <param name="input">主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetLogZTree">
+            <summary>
+                获取目录树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetFiles(System.String,System.Collections.Generic.List{EIP.Common.Entities.Tree.JsTreeEntity}@)">
+            <summary>
+                递归获取文件信息并返回树型结构
+            </summary>
+            <param name="path">文件夹路径</param>
+            <param name="tree">树集合</param>
+        </member>
+        <member name="M:EIP.Controllers.LogController.TxtLogContent(System.String)">
+            <summary>
+                显示内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetPagingExceptionLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                获取所有异常信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetExceptionLogById(EIP.Common.Entities.Dtos.IdInput{System.Int32})">
+            <summary>
+                根据主键获取异常明细
+            </summary>
+            <param name="input">主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteExceptionLogById(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据主键删除异常信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteExceptionLogAll">
+            <summary>
+                根据主键删除异常信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.ExportExcelToExceptionLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                导出到Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetPagingLoginLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                获取所有登录日志信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteLoginLogById(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据主键删除登录日志
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteLoginLogAll">
+            <summary>
+                根据主键删除登录日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.ExportExcelToLoginLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                导出到Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetPagingOperationLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                获取所有操作日志信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetOperationLogById(EIP.Common.Entities.Dtos.IdInput{System.Int32})">
+            <summary>
+                根据主键获取操作日志信息明细
+            </summary>
+            <param name="input">主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteOperationLogById(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据主键删除操作日志
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteOperationLogAll">
+            <summary>
+                根据主键删除操作日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.ExportExcelToOperationLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                导出到Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetPagingSqlLog(EIP.Common.Entities.Paging.QueryParam)">
+            <summary>
+                获取所有数据日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetSqlLogById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据主键获取数据日志
+            </summary>
+            <param name="input">主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteSqlLogById(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                根据主键删除Sql日志
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.DeleteSqlLogAll">
+            <summary>
+                根据主键删除Sql日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.LogController.GetAnalysisForBrowser">
+            <summary>
+            浏览器分析
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.MenuButtonController">
+            <summary>
+                界面按钮控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.GetMenuButtonByMenuId(EIP.Common.Entities.Dtos.NullableIdInput)">
+            <summary>
+                根据菜单Id获取模块按钮信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.SaveMenuButton(EIP.System.Models.Entities.SystemMenuButton)">
+            <summary>
+                保存按钮信息
+            </summary>
+            <param name="function">模块按钮信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.DeleteMenuButton(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.GetMenuButtonFunctions(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            获取该菜单按钮下对应的模块按钮
+            </summary>
+            <param name="input">菜单Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.GetAllFunctions(EIP.System.Models.Dtos.Permission.SystemMenuButtonGetFunctionsInput)">
+            <summary>
+            获取所有模块按钮信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.SaveMenuButtonFunction(System.String)">
+            <summary>
+            保存菜单按钮模块按钮
+            </summary>
+            <param name="menuButtonFunctions">菜单按钮模块按钮</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.DeleteMenuButtonFunction(EIP.System.Models.Entities.SystemMenuButtonFunction)">
+            <summary>
+            删除菜单按钮模块按钮关联
+            </summary>
+            <param name="menuButtonFunction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuButtonController.GetById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            删除菜单按钮模块按钮关联
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.MenuController">
+            <summary>
+                模块维护
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.#ctor(EIP.System.Business.Permission.ISystemMenuLogic)">
+            <summary>
+            
+            </summary>
+            <param name="menuLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetAllMenuTree">
+            <summary>
+                获取所有菜单信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetMenuByParentId(EIP.Common.Entities.Dtos.NullableIdInput)">
+            <summary>
+                根据父级Id获取下级菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.SaveMenu(EIP.System.Models.Entities.SystemMenu)">
+            <summary>
+                保存
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.DeleteMenu(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                删除菜单数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.DeleteMenuAndChilds(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                删除菜单数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetHaveMenuPermissionMenu">
+            <summary>
+                查询所有具有菜单权限的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetHaveDataPermissionMenu">
+            <summary>
+                查询所有具有数据权限的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetHaveFieldPermissionMenu">
+            <summary>
+                查询所有具有字段权限的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetHaveMenuButtonPermissionMenu">
+            <summary>
+                查询所有具有模块按钮的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.MenuController.GetById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            编辑/修改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.OrganizationController">
+            <summary>
+                组织机构
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.#ctor(EIP.System.Business.Identity.ISystemOrganizationLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor,EIP.System.Business.Permission.ISystemPermissionLogic)">
+            <summary>
+            
+            </summary>
+            <param name="organizationLogic"></param>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.GetOrganizationTree">
+            <summary>
+                读取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.GetOrganizationDataTree">
+            <summary>
+                读取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.GetOrganizationsByParentId(EIP.System.Models.Dtos.Identity.SystemOrganizationDataPermissionTreeInput)">
+            <summary>
+                读取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.SaveOrganization(EIP.System.Models.Entities.SystemOrganization)">
+            <summary>
+                保存组织机构数据
+            </summary>
+            <param name="organization"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.DeleteOrganization(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                删除组织机构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.OrganizationController.GetById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            编辑/修改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.PermissionController">
+            <summary>
+                权限控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.#ctor(EIP.System.Business.Permission.ISystemPermissionLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="permissionLogic"></param>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.GetPermissionByPrivilegeMasterValue(EIP.System.Models.Dtos.Permission.SystemPermissionByPrivilegeMasterValueInput)">
+            <summary>
+                根据特权Id获取菜单权限信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.GetFunctionByPrivilegeMaster(System.Guid,EIP.System.Models.Enums.EnumPrivilegeMaster)">
+            <summary>
+                获取所有模块按钮
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.GetDataByPrivilegeMaster(System.Guid,EIP.System.Models.Enums.EnumPrivilegeMaster)">
+            <summary>
+                模块按钮权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.GetMenuHavePermissionByPrivilegeMasterValue(EIP.System.Models.Dtos.Permission.SystemPermissiontMenuHaveByPrivilegeMasterValueInput)">
+            <summary>
+                根据角色Id,岗位Id,组Id,人员Id获取具有的菜单信息
+            </summary>
+            <param name="input">输入参数</param>
+            <returns>树形菜单信息</returns>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.SavePermission(EIP.System.Models.Dtos.Permission.SystemPermissionSaveInput)">
+            <summary>
+                保存权限
+            </summary>
+            <param name="input">权限类型:菜单、模块按钮</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.PermissionController.GetFunctionByMenuIdAndUserId(EIP.Common.Entities.MvcRote)">
+            <summary>
+                获取菜单功能项信息
+            </summary>
+            <param name="mvcRote">权限类型:菜单、模块按钮</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.PostController">
+            <summary>
+                岗位控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.PostController.#ctor(EIP.System.Business.Identity.ISystemPostLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="postLogic"></param>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="M:EIP.Controllers.PostController.GetPostByOrganizationId(EIP.System.Models.Dtos.Identity.SystemPostGetByOrganizationId)">
+            <summary>
+            根据组织机构获取岗位信息
+            </summary>
+            <param name="input">组织机构Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.PostController.SavePost(EIP.System.Models.Entities.SystemPost)">
+            <summary>
+                保存岗位数据
+            </summary>
+            <param name="post">岗位信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.PostController.DeletePost(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+               删除岗位数据
+            </summary>
+            <param name="input">岗位Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.RoleController">
+            <summary>
+                角色控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.#ctor(EIP.System.Business.Identity.ISystemRoleLogic,EIP.System.Business.Permission.ISystemPermissionUserLogic,EIP.System.Business.Identity.ISystemOrganizationLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="roleLogic"></param>
+            <param name="permissionUserLogic"></param>
+            <param name="organizationLogic"></param>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.SaveUserRole(System.String,System.Guid)">
+            <summary>
+                保存用户角色信息
+            </summary>
+            <param name="userRole">角色json字符串</param>
+            <param name="userId">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.GetRolesByOrganization(EIP.System.Models.Dtos.Identity.SystemRolesGetByOrganizationId)">
+            <summary>
+                根据组织机构获取角色信息
+            </summary>
+            <param name="input">组织机构主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.GetChosenRoles(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                获取角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.SaveRole(EIP.System.Models.Entities.SystemRole)">
+            <summary>
+                保存角色数据
+            </summary>
+            <param name="role">角色信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.DeleteRole(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                删除角色数据
+            </summary>
+            <param name="input">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.CopyRole(EIP.System.Models.Dtos.Identity.SystemRoleCopyInput)">
+            <summary>
+                角色复制
+            </summary>
+            <param name="input">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.RoleController.GetById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+            编辑/修改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.UserControlController">
+            <summary>
+                用户控件控制器
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.#ctor(EIP.System.Business.Identity.ISystemGroupLogic,EIP.System.Business.Identity.ISystemPostLogic,EIP.System.Business.Identity.ISystemUserInfoLogic,EIP.System.Business.Permission.ISystemPermissionUserLogic,EIP.System.Business.Identity.ISystemOrganizationLogic,EIP.System.Business.Permission.ISystemMenuLogic,EIP.System.Business.Config.ISystemDictionaryLogic)">
+            <summary>
+            
+            </summary>
+            <param name="groupLogic"></param>
+            <param name="postLogic"></param>
+            <param name="userInfoLogic"></param>
+            <param name="permissionUserLogic"></param>
+            <param name="organizationLogic"></param>
+            <param name="menuLogic"></param>
+            <param name="dictionaryLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.GetDictionaryRemoveChildren(System.Nullable{System.Guid})">
+            <summary>
+                读取树结构:排除下级
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.GetOrganizationTreeRemoveChildren(System.Nullable{System.Guid})">
+            <summary>
+                读取树结构:排除下级
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.GetMenuRemoveChildren(System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+                读取树结构:排除下级
+            </summary>
+            <param name="menuId"></param>
+            <param name="isRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.GetEnumNameValue(EIP.System.Models.Enums.EnumFromType)">
+            <summary>
+            获取枚举数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.GetPagingPrivilegeMasterUser(EIP.System.Models.Dtos.Identity.SystemUserPagingInput)">
+            <summary>
+                分页获取所有用户信息
+            </summary>
+            <param name="paging">用户信息分页参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.GetChosenPrivilegeMasterUser(EIP.System.Models.Enums.EnumPrivilegeMaster,System.Guid)">
+            <summary>
+                查看具有特权的人员
+            </summary>
+            <param name="privilegeMaster">归属人员类型:企业、角色、岗位、组</param>
+            <param name="privilegeMasterValue">企业Id、角色Id、岗位Id、组Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.SavePrivilegeMasterUser(System.String,System.Guid,EIP.System.Models.Enums.EnumPrivilegeMaster)">
+            <summary>
+                保存用户信息
+            </summary>
+            <param name="privilegeMasterUser">用户json字符串</param>
+            <param name="privilegeMasterValue">角色信息</param>
+            <param name="privilegeMaster">归属人员类型:企业、角色、岗位、组</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserControlController.DeletePrivilegeMasterUser(System.Guid,System.Guid,EIP.System.Models.Enums.EnumPrivilegeMaster)">
+            <summary>
+                删除用户
+            </summary>
+            <param name="privilegeMasterUserId">用户Id</param>
+            <param name="privilegeMasterValue">归属类型Id:企业、角色、岗位、组</param>
+            <param name="privilegeMaster">归属人员类型:企业、角色、岗位、组</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Controllers.UserController">
+            <summary>
+                用户管理:此用户为系统使用人员,系统的人员管理在其他模块进行管理(如:人事管理HR)
+                此模块只维护基础信息
+            </summary>
+        </member>
+        <member name="M:EIP.Controllers.UserController.#ctor(EIP.System.Business.Identity.ISystemUserInfoLogic,EIP.System.Business.Permission.ISystemPermissionUserLogic,Microsoft.AspNetCore.Http.IHttpContextAccessor,EIP.System.Business.Identity.ISystemOrganizationLogic,EIP.System.Business.Permission.ISystemPermissionLogic)">
+            <summary>
+            
+            </summary>
+            <param name="userInfoLogic"></param>
+            <param name="permissionUserLogic"></param>
+            <param name="httpContextAccessor"></param>
+            <param name="organizationLogic"></param>
+            <param name="permissionLogic"></param>
+        </member>
+        <member name="M:EIP.Controllers.UserController.GetPagingUser(EIP.System.Models.Dtos.Identity.SystemUserPagingInput)">
+            <summary>
+                分页获取所有用户信息
+            </summary>
+            <param name="paging">用户信息分页参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.GetOrganizationDataTree">
+            <summary>
+                读取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.GetById(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据主键获取用户信息
+            </summary>
+            <param name="input">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.CheckUserCode(EIP.Common.Entities.Dtos.CheckSameValueInput)">
+            <summary>
+                检测代码是否已经具有重复项
+            </summary>
+            <param name="input">需要验证的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.SaveUser(EIP.System.Models.Dtos.Identity.SystemUserSaveInput)">
+            <summary>
+                保存人员数据
+            </summary>
+            <param name="input">人员信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.DeleteUser(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                删除人员数据
+            </summary>
+            <param name="input">人员Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.ExportExcel(EIP.System.Models.Dtos.Identity.SystemUserPagingInput)">
+            <summary>
+                导出到Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.GetDetailByUserId(EIP.Common.Entities.Dtos.IdInput)">
+            <summary>
+                根据用户Id获取用户详细情况
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.ResetPassword(EIP.System.Models.Dtos.Identity.SystemUserResetPasswordInput)">
+            <summary>
+                根据用户Id重置某人密码
+            </summary>
+            <param name="input">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.SaveHeadImage(EIP.Common.Entities.Dtos.IdInput{System.String})">
+            <summary>
+                保存用户头像
+            </summary>
+            <param name="input">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.GetChosenPrivilegeMasterUser(EIP.System.Models.Dtos.Identity.SystemUserGetChosenPrivilegeMasterUser)">
+            <summary>
+                获取用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.SavePrivilegeMasterUser(System.String,System.Guid,EIP.System.Models.Enums.EnumPrivilegeMaster)">
+            <summary>
+                保存用户信息
+            </summary>
+            <param name="privilegeMasterUser">用户json字符串</param>
+            <param name="privilegeMasterValue">角色信息</param>
+            <param name="privilegeMaster">归属人员类型:组织机构、角色、岗位、组</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.SaveChangePassword(EIP.System.Models.Dtos.Identity.SystemUserChangePasswordInput)">
+            <summary>
+                保存修改密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Controllers.UserController.CheckOldPassword(EIP.Common.Entities.Dtos.CheckSameValueInput)">
+            <summary>
+                验证旧密码是否输入正确
+            </summary>
+            <param name="input">需要验证的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EIP.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:EIP.Program.BuildWebHost(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIP.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EIP.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="P:EIP.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EIP.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:EIP.Startup.ConfigureJwtBearer(Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions)">
+            <summary>
+            JwtBearer配置
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:EIP.Startup.RegisterMapper">
+            <summary>
+            Mapper注册
+            </summary>
+        </member>
+        <member name="M:EIP.Startup.RegisterAutofac(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Autofac配置
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Startup.GetAllAssemblies">
+            <summary>
+            获取项目程序集，排除所有的系统程序集(Microsoft.***、System.***等)、Nuget下载包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIP.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="T:EIP.Startup.HttpHeaderOperation">
+            <summary>
+            请求头
+            </summary>
+        </member>
+        <member name="M:EIP.Startup.HttpHeaderOperation.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

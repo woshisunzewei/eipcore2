@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">作业列表</h3>
+                <div class="box-tools pull-right" id="table-toolbar">
+                    <button onclick="getGridData();" title="刷新" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn"><i class="fa fa-refresh">刷新</i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/job/list.js"></script>
+
+@*状态*@
+<script type="text/html" id="templetTriggerState">
+    {{# if(d.TriggerState=="Paused"){}}
+    <small class="label label-warning">暂停中</small>
+    {{#  }else if(d.TriggerState=="Normal"){ }}
+    <small class="label label-info">运行中</small>
+    {{#  }else if(d.TriggerState=="Blocked"){ }}
+    <small class="label label-warning">堵塞中</small>
+    {{#  }else if(d.TriggerState=="Complete"){ }}
+    <small class="label label-primary">已完成</small>
+    {{#  }else if(d.TriggerState=="Error"){ }}
+    <small class="label label-danger">错误</small>
+    {{#  } }}
+</script>

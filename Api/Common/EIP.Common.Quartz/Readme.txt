@@ -1,0 +1,19 @@
+﻿调度组件需要添加第三方Dll
+Install-Package Quartz
+http://www.cnblogs.com/mushroom/p/4231642.html
+http://blog.sina.com.cn/s/blog_afe87e0d0102vf2f.html
+http://blog.csdn.net/wyxhd2008/article/details/8632718
+http://www.knowsky.com/603574.html
+http://www.it165.net/os/html/201406/8639.html
+http://jingpin.jikexueyuan.com/article/9367.html
+http://www.cnblogs.com/xling/p/Quartz.html
+http://www.cnblogs.com/TerryLiang/archive/2011/05/25/2056704.html
+数据库说明文档
+http://blog.chinaunix.net/uid-200142-id-3516164.html
+http://www.cnblogs.com/knowledgesea/p/5145239.html
+http://www.cnblogs.com/knowledgesea/category/719995.html
+http://www.cnblogs.com/isaboy/p/Quartz_NET_stateful_job_adojobstore_sql_server.html
+源码分析
+http://www.cnblogs.com/Doho/archive/2009/03/11/1408886.html
+Cron生成器
+http://www.cnblogs.com/yanweidie/p/3537144.html

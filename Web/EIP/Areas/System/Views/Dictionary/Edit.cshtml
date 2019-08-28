@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseEdit.cshtml";
+}
+<div class="box-body">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">上级</label>
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <input type="text" name="ParentName" id="ParentName" class="form-control" data-pure-clear-button placeholder="上级" readonly="readonly">
+                    <span id="menuBtn" class="input-group-addon pointer"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">名称</label>
+            <div class="col-sm-10">
+                <input type="text" name="Name" id="Name" data-pure-clear-button class="form-control" placeholder="名称">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">值</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="Value" data-pure-clear-button placeholder="值">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">选项</label>
+            <div class="col-sm-10">
+                <label>
+                    <input type="checkbox" data-flag="icheck" class="minimal" name="IsFreeze" id="IsFreeze" />冻结
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">排序号</label>
+            <div class="col-sm-10">
+                <input type="text" name="OrderNo" value="0" class="form-control" data-pure-clear-button placeholder="排序号">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">备注</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="Remark" data-pure-clear-button placeholder="备注"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="ParentId" name="ParentId" />
+<input type="hidden" id="DictionaryId" name="DictionaryId" value="@Context.Request.Query["id"]" />
+
+<div class="dropdown-menu" id="content" style="display:none;">
+    <div class="ip-control">
+        <div class="box-tools">
+            <div class="input-group" id="input-group" style="padding-left:5px">
+                <input type="text" id="searchValueKey" class="form-control input-sm" placeholder="请输入关键字...">
+                <div class="input-group-btn">
+                    <a class="btn btn-sm btn-default" id="searchValue"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="select-tree" class="jstree"></ul>
+</div>
+
+<script src="~/app/system/dictionary/edit.js"></script>

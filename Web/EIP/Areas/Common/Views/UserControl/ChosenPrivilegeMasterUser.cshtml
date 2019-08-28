@@ -1,0 +1,45 @@
+﻿<link href="~/css/edit/edit.css" rel="stylesheet" />
+<div class="modal-body">
+    <div class="box box-widget">
+        <div class="col-md-4 padding-right-box  padding-left-zero">
+            <div class="box box-widget">
+                <div class="box-header with-border">
+                    <h3 class="box-title">单位结构</h3>
+                </div>
+                <div class="box-body">
+                    <ul id="chosenPrivilegeMasterUserTree" class="jstree" style="height: 370px; overflow: auto"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 padding-right-zero padding-left-zero">
+            <div class="box box-widget">
+                <div class="box-header with-border">
+                    <h3 class="box-title">人员</h3>
+                    <div class="box-tools pull-right">
+                        <div class="input-group" style="width: 280px;">
+                            <input type="text" class="form-control input-sm" id="txtKeywords" name="txtKeywords" placeholder="帐号/姓名模糊查询...">
+                            <div onclick="search(); " class="input-group-btn">
+                                <a class="btn btn-sm eip-btn btn-default"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="scrollBar">
+                        <ul id="AccessButton" class="sys_spec_text"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <table id="privilegeMasterUserlist"></table>
+        </div>
+    </div>
+    <div class="box-footer text-right">
+        <button onclick=" formSubmit();" type="button" class="btn btn-success" data-btn-type="save" data-toggle="tooltip" title="确定"><span class="bootstrap-dialog-button-icon fa fa-check"></span>确定</button>
+        <button type="button" class="btn btn-danger" data-btn-type="cancel" data-dismiss="modal" data-toggle="tooltip" title="取消"><span class="bootstrap-dialog-button-icon fa fa-times"></span>取消</button>
+    </div>
+</div>
+@Html.Hidden("privilegeMasterValue")
+@Html.Hidden("privilegeMaster")
+<script src="~/app/common/usercontrol/chosen-privilege-master-user.js"></script>

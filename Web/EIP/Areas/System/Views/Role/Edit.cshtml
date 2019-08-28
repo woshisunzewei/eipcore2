@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseEdit.cshtml";
+}
+<div class="box-body">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">归属单位</label>
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <input type="text" name="OrganizationName" id="OrganizationName" class="form-control" placeholder="无" readonly="readonly">
+                    <span id="menuBtn" class="input-group-addon pointer"><i class="fa fa-sitemap"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">名称</label>
+            <div class="col-sm-10">
+                <input type="text" name="Name" id="Name" data-pure-clear-button class="form-control" placeholder="请输入名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">选项</label>
+            <div class="col-sm-10">
+                <label>
+                    <input type="checkbox" data-flag="icheck" class="minimal" name="IsFreeze" id="IsFreeze" />冻结
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">排序号</label>
+            <div class="col-sm-10">
+                <input type="text" name="OrderNo" class="form-control" data-pure-clear-button placeholder="排序号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">备注</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="Remark" data-pure-clear-button placeholder="备注"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="OrganizationId" name="OrganizationId" />
+<input type="hidden" id="RoleId" name="RoleId" value="@Context.Request.Query["id"]"/>
+
+<div class="dropdown-menu" id="content" style="display:none;">
+    <div class="ip-control">
+        <div class="box-tools">
+            <div class="input-group" id="input-group" style="padding-left:5px">
+                <input type="text" id="searchValueKey" class="form-control input-sm" placeholder="请输入关键字...">
+                <div class="input-group-btn">
+                    <a class="btn btn-sm btn-default" id="searchValue"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="select-tree" class="jstree" style="margin-top:0; height: 223px; overflow: auto"></ul>
+</div>
+<script src="~/app/system/role/edit.js"></script>

@@ -1,0 +1,13 @@
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.System.Models.deps.json
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.System.Models.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\obj\Debug\netcoreapp1.1\EIP.System.Models.AssemblyInfo.cs
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.System.Models.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\obj\Debug\netcoreapp1.1\EIP.System.Models.csprojResolveAssemblyReference.cache
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\obj\Debug\netcoreapp1.1\EIP.System.Models.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\obj\Debug\netcoreapp1.1\EIP.System.Models.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.Common.Core.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.Common.Entities.dll
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.Common.Entities.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\bin\Debug\netcoreapp1.1\EIP.Common.Core.pdb
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\obj\Debug\netcoreapp1.1\EIP.System.Models.csproj.CoreCompileInputs.cache
+F:\05-EIP\EIP.Vue\EIP.Api\EIP\Service\System\EIP.System.Models\obj\Debug\netcoreapp1.1\EIP.System.Models.AssemblyInfoInputs.cache

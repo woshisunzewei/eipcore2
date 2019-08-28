@@ -1,0 +1,27 @@
+﻿@RenderBody()
+@{
+    string action, controller;
+    string area = action = controller = string.Empty;
+
+    var routeData = ViewContext.RouteData.Values.Values.ToList();
+    if (routeData.Any())
+    {
+        area = routeData[0].ToString();//区域
+        controller = routeData[1].ToString();//控制器
+        action = routeData[2].ToString();//方法
+    }
+}
+@Html.HiddenFor(f => area)
+@Html.HiddenFor(f => controller)
+@Html.HiddenFor(f => action)
+<script src="~/app/common/usercontrol/get-function-by-menuIdanduserId.js"></script>
+
+@*是否冻结模版*@
+<script type="text/html" id="templetFreeze">
+    <small class="label label-{{ d.IsFreeze ? 'danger' : 'success' }}">{{ d.IsFreeze ? '冻结' : '未冻结' }}</small>
+</script>
+
+@*图标*@
+<script type="text/html" id="templetIcon">
+    <i class="{{d.Icon}}"></i>
+</script>

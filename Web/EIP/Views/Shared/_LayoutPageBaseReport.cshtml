@@ -1,0 +1,128 @@
+﻿@*图表控件*@
+<script src="~/lib/plugins/echarts/echarts.js"></script>
+@RenderBody()
+<div class="dropdown-menu" id="enterpriseContent" style="display: none;">
+    <div class="ip-control">
+        <div class="box-tools">
+            <div class="input-group" id="enterpriseContent-input-group" style="padding-left: 5px">
+                <input type="text" id="searchEnterpriseKey" class="form-control input-sm" placeholder="请输入关键字...">
+                <div class="input-group-btn">
+                    <a class="btn btn-sm btn-default" id="searchOrganizationName"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="searchEnterpriseTree" class="ztree" style="margin-top: 4px; height: 223px; overflow: auto"></ul>
+</div>
+<script type="text/javascript">
+    var selectEnterpriseFunction = {
+        showEnterprise: function () {
+            var offset = $enterpriseRegionStringObj.offset();
+            $("#enterpriseContent-input-group").width($enterpriseRegionStringObj.width() + 20);
+            $("#enterpriseContent").css({ left: offset.left + "px", top: offset.top+40 + "px" }).slideDown("fast");
+            $("body").bind("mousedown", onOrganizationNameBodyDown);
+        },
+
+        hideOrganization: function () {
+            $("#enterpriseContent").fadeOut("fast");
+            $("body").unbind("mousedown", onOrganizationNameBodyDown);
+        },
+
+        initData: function () {
+            UtilAjaxPost("/DgyEnterprise/GetEnterpriseTree", {}, function (data) {
+                $selectEnterpriseObj.jstree({
+                    core: {
+                        data: data,
+                        check_callback: true,
+                        multiple: true,
+                        strings: {
+                            'Loading ...': '正在加载...'
+                        }
+                    },
+                    plugins: ["sort", "types", "checkbox", "themes", "html_data", 'search'],
+                    "checkbox": {
+                        "three_state": false
+                    },
+                    types: {
+                        default: {
+                            icon: 'fa  fa-file-text-o'
+                        }
+                    }
+                }).bind("click.jstree", function (e, data) {
+                    //获取所有选择项
+                    var nodes = $selectEnterpriseObj.jstree().get_checked(true), names = "", ids = "";
+                    $.each(nodes, function (i, item) {
+                        names += item.text + ",";
+                        ids += item.id + ",";
+                    });
+                    if (nodes.length > 0) {
+                        names = names.substr(0, names.length - 1);
+                        ids = ids.substr(0, ids.length - 1);
+                    }
+                    $enterpriseRegionStringObj.val(names);
+                    $enterpriseRegion.val(ids);
+                });
+            });
+
+        },
+
+        search: function (key) {
+            $selectEnterpriseObj.jstree(true).search(key, true, true);
+        }
+    }
+
+    function onOrganizationNameBodyDown(event) {
+        if (!(event.target.id === "enterpriseContent" || $(event.target).parents("#enterpriseContent").length > 0)) {
+            selectEnterpriseFunction.hideOrganization();
+        }
+    }
+
+    var $selectEnterpriseObj = null, $enterpriseRegionStringObj, $enterpriseRegion;
+
+    $(document).ready(function () {
+        $selectEnterpriseObj = $("#searchEnterpriseTree");
+        $enterpriseRegionStringObj = $("#Enterprise");
+        $enterpriseRegion = $("#EnterpriseRegion");
+        selectEnterpriseFunction.initData();
+
+        $('#searchOrganizationName').on("click", function (e) {
+            selectEnterpriseFunction.search($("#searchEnterpriseKey").val());
+        });
+
+        $('#searchEnterpriseKey').on("keyup", function (e) {
+            selectEnterpriseFunction.search($(this).val());
+        });
+    });
+</script>
+
+
+@*时间控件*@
+<script>
+    function init() {
+        //初始化显示当前时间
+        $('#reservationtime span').html(moment().subtract('hours', 1).format('YYYY-MM-DD') + ' - ' + moment().format('YYYY-MM-DD'));
+        //日期控件初始化
+        $('#reservationtime').daterangepicker(
+            {
+                'locale': Language.daterangepickerlocale,
+                //汉化按钮部分
+                ranges: {
+                    '今日': [moment(), moment()],
+                    '前一天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    '前三天': [moment().subtract(3, 'days'), moment().subtract(1, 'days')],
+                    '前七天': [moment().subtract(7, 'days'), moment().subtract(1, 'days')]
+                },
+                startDate: moment().subtract(0, 'days'),
+                endDate: moment(),
+                maxDate: moment() //最大时间
+            },
+            function (start, end) {
+                $('#reservationtime span').html(start.format('YYYY-MM-DD') + ' 至 ' + end.format('YYYY-MM-DD'));
+            }
+        );
+    };
+    $(document).ready(function () {
+        init();
+    });
+    
+</script>

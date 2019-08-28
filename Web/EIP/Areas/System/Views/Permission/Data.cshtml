@@ -1,0 +1,46 @@
+﻿<link href="~/css/edit/edit.css" rel="stylesheet" />
+<div class="modal-body">
+    <div class="box box-widget">
+        <div class="col-md-4 padding-right-box  padding-left-zero">
+            <div class="box box-widget">
+                <div class="box-header with-border">
+                    <h3 class="box-title">菜单结构</h3>
+                </div>
+                <div class="box-body">
+                    <ul id="data-tree" class="jstree" style="height: 370px; overflow: auto"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 padding-right-zero padding-left-zero">
+            <div class="box box-widget">
+                <div class="box-header with-border">
+                    <h3 class="box-title">数据权限</h3>
+                    <div class="box-tools">
+                        <a href="javascript:void(0);" onclick=" selectall(); return false; " data-toggle="tooltip" title="全选" class="btn eip-btn btn-flat btn-sm"><i class="fa fa-check-circle-o" id="select">全选</i></a>
+                    </div>
+                </div>
+                <div class="box-body">
+                    @*所有功能性按钮*@
+                    <div style="height: 380px;" class="scrollBar">
+                        <div id="alertdismiss" style="width: 370px;margin:10px 0 0 80px;" class="alert alert-warning alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-warning"></i> 提示!</h4>
+                            <div class="msg-content">点击左侧菜单查看数据权限信息</div>
+                        </div>
+                        <ul id="accessButton" class="sys_spec_text" style="display: none"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <table id="privilegeMasterUserlist"></table>
+        </div>
+    </div>
+    <div class="box-footer text-right">
+        <button onclick=" formSubmit();" type="button" class="btn btn-success" data-btn-type="save" title="确定"><span class="bootstrap-dialog-button-icon fa fa-check"></span>确定</button>
+        <button type="button" class="btn btn-danger" data-btn-type="cancel" data-dismiss="modal"><span class="bootstrap-dialog-button-icon fa fa-times"></span>取消</button>
+    </div>
+</div>
+@Html.Hidden("privilegeMasterValue")
+@Html.Hidden("privilegeMaster")
+<script src="~/app/system/permission/data.js"></script>

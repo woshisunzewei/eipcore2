@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EIP权限工作流平台</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/lib/dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/lib/plugins/iCheck/square/blue.css" rel="stylesheet" />
+    <link href="~/lib/plugins/pace/pace.min.css" rel="stylesheet" />
+    <script src="~/lib/resource/language_zh.js"></script>
+    <script src="~/lib/plugins/pace/pace.min.js"></script>
+    <link href="~/css/login/login.css" rel="stylesheet" />
+</head>
+<body class="hold-transition login-page login-body">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#"><b>EIP权限工作流平台</b></a>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg"></p>
+            <div id="submitMsg" style="height: 36px; padding: 1px 1px 1px 8px; display: none; margin-bottom: 15px; border-radius:0px">
+                <h4><i class="icon fa fa-check"></i> </h4>
+            </div>
+            <div class="form-group has-feedback">
+                <input id="userCode" class="form-control" value="" placeholder="用户名">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input id="userPwd" type="password" value="" class="form-control" placeholder="密码">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <div id="verify_box">
+                    <div id="verify_xbox">
+                        <div id="btn">
+                            <img src="~/css/login/images/left.png" />
+                        </div>
+                    </div>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;按住滑块，拖动到最右边
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+                            <input type="checkbox" id="remember" checked="checked"> 记住我
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <button id="submit" type="submit" autocomplete="off" data-loading-text="登录中..." class="btn btn-primary btn-block btn-flat">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/plugins/iCheck/icheck.min.js"></script>
+
+    <environment names="Development">
+        <script src="~/app/account/login.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/build/js/account/login.min.js"></script>
+    </environment>
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+</body>
+</html>

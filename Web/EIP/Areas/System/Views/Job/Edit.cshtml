@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseEdit.cshtml";
+}
+<div class="box-body">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">作业名称</label>
+            <div class="col-sm-10">
+                <input type="text" id="JobName" value="@Context.Request.Query["JobName"]" name="JobName" data-pure-clear-button class="form-control" placeholder="请输入作业名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">命名空间</label>
+            <div class="col-sm-10">
+                <input type="text" id="NamespaceName" name="NamespaceName" data-pure-clear-button class="form-control" placeholder="请输入类名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">类名</label>
+            <div class="col-sm-10">
+                <input type="text" id="ClassName" name="ClassName" data-pure-clear-button class="form-control" placeholder="请输入方法名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label m">Cron表达式</label>
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <input type="text" name="Expression" data-pure-clear-button class="form-control" placeholder="请输入Cron表达式">
+                    <span id="cron" class="input-group-addon pointer"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">选项</label>
+            <div class="col-sm-10">
+                <label>
+                    <input type="checkbox" data-flag="icheck" class="minimal" name="ReplaceExists" id="ReplaceExists" />根据JobKey/TriggerKey替换现有任务
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">排除日历</label>
+            <div class="col-sm-10">
+                <select id="ChoicedCalendar" name="ChoicedCalendar" class='form-control'></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">描述</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="JobDescription" data-pure-clear-button placeholder="请输入描述"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="EIP定时器组" id="JobGroup" name="JobGroup">
+<input type="hidden" value="EIP触发器" id="TriggerName" name="TriggerName">
+<input type="hidden" value="EIP触发器组" id="TriggerGroup" name="TriggerGroup">
+<input type="hidden" value="CronTriggerImpl" id="TriggerType" name="TriggerType">
+<input type="hidden" value="true" name="Repeat" id="Repeat" />
+<script src="~/app/system/job/edit.js"></script>

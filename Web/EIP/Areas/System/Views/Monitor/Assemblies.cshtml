@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPageBaseList.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <h3 class="box-title">程序集</h3>
+                <div class="box-tools pull-right" id="table-toolbar">
+                    <button onclick="getGridData();" title="刷新" data-toggle="tooltip" class="btn btn-flat btn-sm eip-btn"><i class="fa fa-refresh">刷新</i></button>                  
+                </div>
+            </div>
+            <div class="box-body">
+                <table id="list"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/app/system/monitor/assemblies.js"></script>
+
